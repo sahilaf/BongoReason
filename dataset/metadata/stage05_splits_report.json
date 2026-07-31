@@ -1,0 +1,37 @@
+{
+  "stage": "05_make_splits",
+  "salt": "bongoreason-v0.4",
+  "val_fraction": 0.05,
+  "test_fraction": 0.05,
+  "total": 23899,
+  "counts": {
+    "train": 21513,
+    "test": 1193,
+    "val": 1193
+  },
+  "by_pool": {
+    "train": {
+      "rl": 958,
+      "sft": 20555
+    },
+    "test": {
+      "rl": 52,
+      "sft": 1141
+    },
+    "val": {
+      "rl": 52,
+      "sft": 1141
+    }
+  },
+  "verifiable": {
+    "train": 15812,
+    "test": 879,
+    "val": 879
+  },
+  "checksums": {
+    "train": "0df96787c79ef316",
+    "val": "bbaf53f692b33de1",
+    "test": "3caa205e4b1a5df3"
+  },
+  "strata": 34
+}

@@ -1,0 +1,35 @@
+{
+  "stage": "04_build_script_pairs",
+  "input_records": 23899,
+  "pairs": 22469,
+  "excluded_degenerate": 1430,
+  "pairs_with_solution": 21471,
+  "by_pool": {
+    "rl": 998,
+    "sft": 21471
+  },
+  "by_source": {
+    "bangla_math_bdmo": 941,
+    "bengali_math_cot": 13300,
+    "mgsm_bn": 6,
+    "numina_bn": 4311,
+    "somadhan": 3911
+  },
+  "original_script": {
+    "bangla_math_bdmo/arabic": 941,
+    "bangla_math_bdmo/none": 56,
+    "bengali_math_cot/arabic": 11842,
+    "bengali_math_cot/bengali": 976,
+    "bengali_math_cot/mixed": 482,
+    "bengali_math_cot/none": 957,
+    "mgsm_bn/arabic": 6,
+    "mgsm_bn/none": 2,
+    "numina_bn/arabic": 3865,
+    "numina_bn/bengali": 303,
+    "numina_bn/none": 332,
+    "numina_bn/mixed": 143,
+    "somadhan/bengali": 3908,
+    "somadhan/none": 83,
+    "somadhan/mixed": 3
+  }
+}

@@ -1,0 +1,42 @@
+{
+  "stage": "03_decontaminate",
+  "threshold": 0.8,
+  "eval_sets": {
+    "banglamath": 1763,
+    "bn_mgsm": 250,
+    "gsm_plus_bn": 21088
+  },
+  "input_records": 27584,
+  "contaminated": 3685,
+  "by_benchmark": {
+    "banglamath": 1,
+    "bn_mgsm": 738,
+    "bn_msvamp(unavailable)": 2946
+  },
+  "by_match_kind": {
+    "exact": 1,
+    "near": 8,
+    "lineage": 730,
+    "lineage_unverifiable": 2946
+  },
+  "by_source": {
+    "bengali_math_cot": 1,
+    "distractmath_mgsm": 738,
+    "distractmath_msvamp": 2946
+  },
+  "lineage_matches": 730,
+  "lineage_unverifiable": {
+    "distractmath_msvamp": 2946
+  },
+  "sources_removed_entirely": [
+    "distractmath_mgsm",
+    "distractmath_msvamp"
+  ],
+  "output_records": 23899,
+  "by_pool": {
+    "rl": 1062,
+    "sft": 22837
+  },
+  "verifiable": 17570,
+  "unresolved_gaps": []
+}

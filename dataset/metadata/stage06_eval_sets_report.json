@@ -1,0 +1,62 @@
+{
+  "banglamath": {
+    "status": "ok",
+    "citation": "Prama et al., MathNLP 2025 (arXiv:2510.12836)",
+    "problems": 1703,
+    "variants_differ": 1302,
+    "verifiable": 728,
+    "usable_for_agreement": 675,
+    "answer_types": {
+      "other": 508,
+      "numeric": 649,
+      "fraction": 23,
+      "expression": 467,
+      "percent": 49,
+      "mcq_option": 7
+    },
+    "original_script": {
+      "no_digits": 401,
+      "bengali": 834,
+      "arabic": 466,
+      "mixed": 2
+    },
+    "skipped": {}
+  },
+  "bn_mgsm": {
+    "status": "ok",
+    "citation": "MGSM Bengali test split",
+    "problems": 250,
+    "variants_differ": 245,
+    "verifiable": 250,
+    "usable_for_agreement": 245,
+    "answer_types": {
+      "numeric": 250
+    },
+    "original_script": {
+      "arabic": 245,
+      "no_digits": 5
+    },
+    "skipped": {}
+  },
+  "gsm_plus_bn": {
+    "status": "ok",
+    "citation": "Paul et al., arXiv:2607.13248",
+    "problems": 10544,
+    "variants_differ": 10318,
+    "verifiable": 9203,
+    "usable_for_agreement": 9073,
+    "answer_types": {
+      "numeric": 9190,
+      "other": 1339,
+      "expression": 2,
+      "fraction": 13
+    },
+    "original_script": {
+      "bengali": 10316,
+      "no_digits": 226,
+      "mixed": 1,
+      "arabic": 1
+    },
+    "skipped": {}
+  }
+}

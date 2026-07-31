@@ -1,0 +1,29 @@
+{
+  "stage": "02_dedup",
+  "threshold": 0.9,
+  "permutations": 128,
+  "bands": 8,
+  "rows_per_band": 16,
+  "input_records": 28178,
+  "exact_removed": 458,
+  "near_removed": 136,
+  "output_records": 27584,
+  "by_pool": {
+    "sft": 22838,
+    "rl": 4746
+  },
+  "by_source": {
+    "somadhan": 3994,
+    "bangla_math_bdmo": 997,
+    "bengali_math_cot": 14258,
+    "numina_bn": 4643,
+    "distractmath_mgsm": 738,
+    "distractmath_msvamp": 2946,
+    "mgsm_bn": 8
+  },
+  "verifiable": 21255,
+  "answer_conflicts": {
+    "resolved_by_majority": 25,
+    "unresolved_demoted": 60
+  }
+}

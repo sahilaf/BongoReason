@@ -1,0 +1,273 @@
+{
+  "raw": {
+    "bangla_math_bdmo_raw.csv": {
+      "rows": 1455,
+      "columns": [
+        "ID",
+        "Problem",
+        "Messages",
+        "COT",
+        "POT",
+        "Answer"
+      ],
+      "size_mb": 7.7
+    },
+    "bengali_math_cot_raw.csv": {
+      "rows": 859318,
+      "columns": [
+        "problem",
+        "solution"
+      ],
+      "size_mb": 2093.1
+    },
+    "dart_math_bangla_raw.csv": {
+      "rows": 1000,
+      "columns": [
+        "query",
+        "eng_query",
+        "response",
+        "eng_response"
+      ],
+      "size_mb": 1.0
+    },
+    "distractmath_mgsm_raw.csv": {
+      "rows": 738,
+      "columns": [
+        "row_index",
+        "original_question",
+        "modified_question",
+        "ground_truth",
+        "augmentation_type",
+        "added_sentences",
+        "justification",
+        "answers_match"
+      ],
+      "size_mb": 1.8
+    },
+    "distractmath_msvamp_raw.csv": {
+      "rows": 2947,
+      "columns": [
+        "row_index",
+        "original_question",
+        "modified_question",
+        "ground_truth",
+        "augmentation_type",
+        "added_sentences",
+        "justification",
+        "answers_match"
+      ],
+      "size_mb": 5.7
+    },
+    "mgsm_bn_train_raw.csv": {
+      "rows": 8,
+      "columns": [
+        "question",
+        "answer",
+        "answer_number",
+        "equation_solution"
+      ],
+      "size_mb": 0.0
+    },
+    "numina_bn_subset_raw.csv": {
+      "rows": 5000,
+      "columns": [
+        "problem",
+        "solution"
+      ],
+      "size_mb": 12.3
+    },
+    "somadhan_raw.csv": {
+      "rows": 4001,
+      "columns": [
+        "question",
+        "answer"
+      ],
+      "size_mb": 4.8
+    }
+  },
+  "master": {
+    "total": 30148,
+    "by_source": {
+      "somadhan": 4000,
+      "bangla_math_bdmo": 1455,
+      "bengali_math_cot": 15000,
+      "dart_math_bangla": 1000,
+      "distractmath_mgsm": 738,
+      "distractmath_msvamp": 2947,
+      "mgsm_bn": 8,
+      "numina_bn": 5000
+    },
+    "fill_rates": {
+      "bengali_math_cot": {
+        "question_bn": 100.0,
+        "normalized_question": 100.0,
+        "question_bn_digits": 100.0,
+        "solution_bn": 100.0,
+        "solution_bn_digits": 100.0,
+        "answer": 0.0
+      },
+      "numina_bn": {
+        "question_bn": 100.0,
+        "normalized_question": 100.0,
+        "question_bn_digits": 100.0,
+        "solution_bn": 100.0,
+        "solution_bn_digits": 100.0,
+        "answer": 0.0
+      },
+      "somadhan": {
+        "question_bn": 100.0,
+        "normalized_question": 100.0,
+        "question_bn_digits": 100.0,
+        "solution_bn": 0.0,
+        "solution_bn_digits": 0.0,
+        "answer": 100.0
+      },
+      "distractmath_msvamp": {
+        "question_bn": 100.0,
+        "normalized_question": 100.0,
+        "question_bn_digits": 100.0,
+        "solution_bn": 0.0,
+        "solution_bn_digits": 0.0,
+        "answer": 100.0
+      },
+      "bangla_math_bdmo": {
+        "question_bn": 100.0,
+        "normalized_question": 100.0,
+        "question_bn_digits": 100.0,
+        "solution_bn": 100.0,
+        "solution_bn_digits": 100.0,
+        "answer": 100.0
+      },
+      "dart_math_bangla": {
+        "question_bn": 100.0,
+        "normalized_question": 100.0,
+        "question_bn_digits": 100.0,
+        "solution_bn": 57.3,
+        "solution_bn_digits": 57.3,
+        "answer": 0.0
+      },
+      "distractmath_mgsm": {
+        "question_bn": 100.0,
+        "normalized_question": 100.0,
+        "question_bn_digits": 100.0,
+        "solution_bn": 0.0,
+        "solution_bn_digits": 0.0,
+        "answer": 100.0
+      },
+      "mgsm_bn": {
+        "question_bn": 100.0,
+        "normalized_question": 100.0,
+        "question_bn_digits": 100.0,
+        "solution_bn": 100.0,
+        "solution_bn_digits": 100.0,
+        "answer": 100.0
+      }
+    },
+    "dual_script": {
+      "bengali_math_cot": {
+        "identical_pct": 14.2,
+        "digits_have_bn_pct": 92.4,
+        "digits_have_ar_pct": 0.0,
+        "usable_pair_pct": 85.8
+      },
+      "numina_bn": {
+        "identical_pct": 14.2,
+        "digits_have_bn_pct": 92.0,
+        "digits_have_ar_pct": 0.0,
+        "usable_pair_pct": 85.8
+      },
+      "somadhan": {
+        "identical_pct": 99.9,
+        "digits_have_bn_pct": 97.9,
+        "digits_have_ar_pct": 0.0,
+        "usable_pair_pct": 0.1
+      },
+      "distractmath_msvamp": {
+        "identical_pct": 76.6,
+        "digits_have_bn_pct": 99.6,
+        "digits_have_ar_pct": 0.0,
+        "usable_pair_pct": 23.4
+      },
+      "bangla_math_bdmo": {
+        "identical_pct": 5.4,
+        "digits_have_bn_pct": 94.6,
+        "digits_have_ar_pct": 0.0,
+        "usable_pair_pct": 94.6
+      },
+      "dart_math_bangla": {
+        "identical_pct": 70.0,
+        "digits_have_bn_pct": 94.5,
+        "digits_have_ar_pct": 0.0,
+        "usable_pair_pct": 30.0
+      },
+      "distractmath_mgsm": {
+        "identical_pct": 1.9,
+        "digits_have_bn_pct": 99.2,
+        "digits_have_ar_pct": 0.0,
+        "usable_pair_pct": 98.1
+      },
+      "mgsm_bn": {
+        "identical_pct": 25.0,
+        "digits_have_bn_pct": 75.0,
+        "digits_have_ar_pct": 0.0,
+        "usable_pair_pct": 75.0
+      }
+    },
+    "final_answer": {
+      "bengali_math_cot": {
+        "gsm_marker_pct": 3.5,
+        "bare_answer_pct": 0.0,
+        "no_answer": 14478
+      },
+      "numina_bn": {
+        "gsm_marker_pct": 3.6,
+        "bare_answer_pct": 0.0,
+        "no_answer": 4820
+      },
+      "somadhan": {
+        "gsm_marker_pct": 100.0,
+        "bare_answer_pct": 0.0,
+        "no_answer": 2
+      },
+      "distractmath_msvamp": {
+        "gsm_marker_pct": 0.0,
+        "bare_answer_pct": 100.0,
+        "no_answer": 0
+      },
+      "bangla_math_bdmo": {
+        "gsm_marker_pct": 0.9,
+        "bare_answer_pct": 100.0,
+        "no_answer": 0
+      },
+      "dart_math_bangla": {
+        "gsm_marker_pct": 0.0,
+        "bare_answer_pct": 0.0,
+        "no_answer": 1000
+      },
+      "distractmath_mgsm": {
+        "gsm_marker_pct": 0.0,
+        "bare_answer_pct": 100.0,
+        "no_answer": 0
+      },
+      "mgsm_bn": {
+        "gsm_marker_pct": 0.0,
+        "bare_answer_pct": 100.0,
+        "no_answer": 0
+      }
+    },
+    "duplicate_ids": 0,
+    "duplicate_questions": 640,
+    "no_answer_total": 20300
+  },
+  "corrections": {
+    "total": 100,
+    "by_error_type": {
+      "formula_reversal": 31,
+      "arithmetic_sign_flip": 32,
+      "wrong_conversion_factor": 37
+    },
+    "by_generator": {
+      "python_rule_based": 100
+    }
+  }
+}

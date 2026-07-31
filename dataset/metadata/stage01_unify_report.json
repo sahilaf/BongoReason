@@ -1,0 +1,51 @@
+{
+  "stage": "01_unify_schema",
+  "input": "dataset\\verified\\bongo_reason_v0.3.json",
+  "output": "dataset\\interim\\unified_v0.4.json",
+  "input_records": 30148,
+  "output_records": 28178,
+  "dropped": {
+    "no_recoverable_answer": {
+      "somadhan": 2,
+      "bengali_math_cot": 571,
+      "numina_bn": 195
+    },
+    "cjk_contamination": {
+      "bengali_math_cot": 142,
+      "distractmath_msvamp": 1,
+      "numina_bn": 59
+    },
+    "dropped_source": {
+      "dart_math_bangla": 1000
+    }
+  },
+  "dropped_sources": {
+    "dart_math_bangla": "corrupt: translation lost sentence alignment, solution text is shifted across rows and bleeds between problems (MANIFEST B2). English columns in the raw CSV are intact if re-translation is ever attempted."
+  },
+  "by_pool": {
+    "sft": {
+      "somadhan": 3998,
+      "bengali_math_cot": 14245,
+      "numina_bn": 4729
+    },
+    "rl": {
+      "bangla_math_bdmo": 1455,
+      "bengali_math_cot": 42,
+      "distractmath_mgsm": 738,
+      "distractmath_msvamp": 2946,
+      "mgsm_bn": 8,
+      "numina_bn": 17
+    }
+  },
+  "answer_types": {
+    "numeric": 16967,
+    "other": 637,
+    "fraction": 1038,
+    "mcq_option": 3443,
+    "bool_bn": 77,
+    "symbolic": 1795,
+    "expression": 3887,
+    "percent": 334
+  },
+  "verifiable": 21859
+}
