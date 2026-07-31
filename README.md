@@ -19,9 +19,22 @@ The falsification test is built and ready to run: 9,993 gradable dual-script
 problem pairs across three benchmarks. See
 [`docs/colab_quickstart.md`](docs/colab_quickstart.md).
 
+**Run it:** open [`notebooks/01_script_gap_experiment.ipynb`](notebooks/01_script_gap_experiment.ipynb)
+in Colab, or locally:
+
 ```bash
 python scripts/run_eval.py --model Qwen/Qwen3-0.6B --benchmark bn_mgsm --limit 20
 ```
+
+## Data
+
+The built dataset lives on Hugging Face at
+[`sahilfarib/bongo-reason`](https://huggingface.co/datasets/sahilfarib/bongo-reason)
+— it is 165 MB, over GitHub's per-file limit. It is **private** until source
+licensing is resolved; see the Licensing section of its dataset card.
+
+Evaluation benchmarks are deliberately not redistributed in either place. Fetch
+them from their original sources with `scripts/00_fetch_eval.py`.
 
 ## Quick start
 
