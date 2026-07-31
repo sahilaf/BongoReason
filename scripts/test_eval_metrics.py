@@ -49,6 +49,9 @@ EXPECTED = {
     "answer_agreement": 0.6,
     "both_correct": 0.4,
     "correctness_flip": 0.2,
+    "parseable_ar": 1.0,
+    "parseable_bn": 1.0,
+    "truncated_bn": 0.2,   # cases 8-9 below
 }
 
 
@@ -61,7 +64,11 @@ def write_fixture(path, extra=""):
                 "gold_answer": "10", "answer_type": "numeric",
                 "predicted_raw": pred, "predicted_canonical": repr(float(pred)),
                 "extraction_method": "boxed", "correct": ok,
-                "reason": "numeric_compare", "output_chars": 100, "output": None,
+                "reason": "numeric_compare", "output_chars": 100,
+                "output_tokens": 512 if (i >= 8 and script == "bn") else 100,
+                "token_budget": 512,
+                "truncated": i >= 8 and script == "bn",
+                "output": None,
             })
     path.write_text(
         "\n".join(json.dumps(r, ensure_ascii=False) for r in rows) + extra,
@@ -112,6 +119,33 @@ def main():
         after = run_eval.report([path], ["bn_mgsm"])["bn_mgsm"]
     if after["n_paired"] != 10:
         failures.append(f"unpaired item leaked into metric: n={after['n_paired']}")
+
+    # Stratified sampling must be balanced, deterministic under a seed, and
+    # different under a different seed.
+    records = [
+        {"eval_id": f"s_{i}", "meta": {"perturbation_type": f"p{i % 4}"}}
+        for i in range(400)
+    ]
+    picked = run_eval.stratified_sample(records, 40, seed=0)
+    strata = {}
+    for r in picked:
+        strata[r["meta"]["perturbation_type"]] = strata.get(r["meta"]["perturbation_type"], 0) + 1
+    if len(picked) != 40:
+        failures.append(f"stratified_sample returned {len(picked)}, expected 40")
+    if set(strata.values()) != {10}:
+        failures.append(f"strata not balanced: {strata}")
+    if [r["eval_id"] for r in picked] != [
+        r["eval_id"] for r in run_eval.stratified_sample(records, 40, seed=0)
+    ]:
+        failures.append("stratified_sample is not deterministic for a fixed seed")
+    if [r["eval_id"] for r in picked] == [
+        r["eval_id"] for r in run_eval.stratified_sample(records, 40, seed=1)
+    ]:
+        failures.append("stratified_sample ignores the seed")
+    # Asking for more than exists must not duplicate or crash.
+    everything = run_eval.stratified_sample(records, 10_000, seed=0)
+    if len({r["eval_id"] for r in everything}) != len(everything):
+        failures.append("stratified_sample produced duplicates when oversampling")
 
     if failures:
         print(f"FAILED ({len(failures)}):")
