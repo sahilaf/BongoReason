@@ -19,8 +19,8 @@ The falsification test is built and ready to run: 9,993 gradable dual-script
 problem pairs across three benchmarks. See
 [`docs/colab_quickstart.md`](docs/colab_quickstart.md).
 
-**Run it:** open [`notebooks/01_script_gap_experiment.ipynb`](notebooks/01_script_gap_experiment.ipynb)
-in Colab, or locally:
+**Run it:** [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/sahilaf/BongoReason/blob/main/notebooks/01_script_gap_experiment.ipynb)
+or locally:
 
 ```bash
 python scripts/run_eval.py --model Qwen/Qwen3-0.6B --benchmark bn_mgsm --limit 20
